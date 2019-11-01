@@ -492,10 +492,22 @@
 
 #pragma mark -- 登录
 -(void) loginAction {
+      NSString * password = [UserInfo sha224:@"13265636826"];
+    NSDictionary *dic = @{
+                          @"mobile":@"13265636826",
+                          @"pwd":password
+                          
+                          };
+    [YGHttpRequest POSTDataUrl:[NSString stringWithFormat:@"%@%@",@"http://192.168.31.114:8082",@"/api/v1/login/sign"] Parameters:dic callback:^(id obj) {
+        NSLog(@"obj",obj);
+        
+    } ];
     
-    TabBarViewController *tabar = [[TabBarViewController alloc] init];
     
-    self.view.window.rootViewController = tabar;
+    
+//    TabBarViewController *tabar = [[TabBarViewController alloc] init];
+//
+//    self.view.window.rootViewController = tabar;
     
     return;
     
