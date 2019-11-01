@@ -1,0 +1,126 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AMapFoundation (1.5.7)
+  - AMapLocation (2.6.3):
+    - AMapFoundation (~> 1.4)
+  - Bugly (2.5.0)
+  - CTAssetsPickerController (3.3.1):
+    - PureLayout (~> 3.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.5.0)
+  - JCore (2.1.4)
+  - JPush (3.2.6):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - JQFMDB (1.1.6):
+    - FMDB
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.2.1)
+  - MJRefresh (3.2.0)
+  - MLLabel (1.10.5)
+  - MMWebView (1.1)
+  - PureLayout (3.0.2)
+  - RongCloudIM/IMKit (2.9.3):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.9.3)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
+  - UMCAnalytics (5.5.4):
+    - UMCCommon
+  - UMCCommon (1.5.3)
+  - UUButton (1.1)
+  - WechatOpenSDK (1.8.6)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - AMapLocation
+  - Bugly
+  - CTAssetsPickerController
+  - IQKeyboardManager
+  - JPush
+  - JQFMDB
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - MLLabel
+  - MMWebView
+  - RongCloudIM/IMKit (= 2.9.3)
+  - RongCloudIM/IMLib (= 2.9.3)
+  - SDWebImage (~> 4.4.2)
+  - UMCAnalytics (~> 5.5.0)
+  - UMCCommon (~> 1.5.2)
+  - UUButton
+  - WechatOpenSDK (~> 1.8.2)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - AMapFoundation
+    - AMapLocation
+    - Bugly
+    - CTAssetsPickerController
+    - FMDB
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - JQFMDB
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - MLLabel
+    - MMWebView
+    - PureLayout
+    - RongCloudIM
+    - SDWebImage
+    - UMCAnalytics
+    - UMCCommon
+    - UUButton
+    - WechatOpenSDK
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMapFoundation: 216d58448c80356434ac4332250a8fdb2f5c4d1e
+  AMapLocation: dc2c4fde95d72087d73934338160fadc72104bb7
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  CTAssetsPickerController: b1d1d50ab87cf6b8b13531de5f4530482e7e53ed
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
+  JCore: d345c049141877eb61c33011455fdb5fcab1673f
+  JPush: 41dd48a69bd8c08abc692dc7f2b23c0fb281471f
+  JQFMDB: 39ab0d6d7c26fd30e51c4dd92edcb27506a34c3a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MLLabel: d76124055a2205e7f76878e62cd06ba925ba0c97
+  MMWebView: 4d7c3789bc558e615bed91e9fb3e1a2a62a514ad
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  RongCloudIM: 3990730b9f65da3fd32c71be699c1a29c219c6b5
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  UMCAnalytics: 8449e33b7627ee26f1169202827a8d5a00b5442b
+  UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
+  UUButton: 9a19bbe0c812a6920de21da8acca7a2d0bad52da
+  WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
+
+PODFILE CHECKSUM: 4d33df6456baf0acad9da42b21b979d0b0ebb22f
+
+COCOAPODS: 1.8.3
