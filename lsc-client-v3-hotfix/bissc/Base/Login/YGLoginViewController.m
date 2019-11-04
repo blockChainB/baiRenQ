@@ -492,7 +492,6 @@
 
 #pragma mark -- 登录
 -(void) loginAction {
-//    deviceUUID
     NSString * password = [UserInfo sha224:@"13265636826"];
 //     @"pwd":password
     NSDictionary *dic = @{
