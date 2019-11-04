@@ -492,10 +492,12 @@
 
 #pragma mark -- 登录
 -(void) loginAction {
-      NSString * password = [UserInfo sha224:@"13265636826"];
+//    deviceUUID
+    NSString * password = [UserInfo sha224:@"13265636826"];
+//     @"pwd":password
     NSDictionary *dic = @{
-                          @"mobile":@"13265636826",
-                          @"pwd":password
+                          @"deviceUUID":[UserInfo deviceUUID],
+                          @"name":[UIDevice currentDevice].name
                           
                           };
     [YGHttpRequest POSTDataUrl:[NSString stringWithFormat:@"%@%@",@"http://192.168.31.114:8082",@"/api/v1/login/sign"] Parameters:dic callback:^(id obj) {
