@@ -27,7 +27,7 @@ singleton_interface(UserInfo)
 @property (nonatomic,copy)NSString *isAdStr;//跳转广告
 @property (nonatomic,assign)BOOL isPushAppStore;//显示版本升级
 
-
+@property (nonatomic,copy)NSString  *portrait;
 @property (nonatomic,copy)NSString  *username;
 @property (nonatomic,copy)NSString  *password;
 @property (nonatomic,copy)NSString  *memberId;

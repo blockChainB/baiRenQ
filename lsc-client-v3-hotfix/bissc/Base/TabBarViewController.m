@@ -5,7 +5,7 @@
 //  Created by 龙广发 on 2018/7/24.
 //  Copyright © 湖南灵控智能科技有限公司. All rights reserved.
 //
-
+#import "MYHostHomeMode.h"
 #import "TabBarViewController.h"
 #import "BaseNavigationController.h"
 //#import "HomeModel.h"
@@ -72,7 +72,7 @@
     
     _jqdb = [JQFMDB shareDatabase];
     
-    [[RCIM sharedRCIM] initWithAppKey:@"z3v5yqkbz1vc0"];//融云即时通讯
+    [[RCIM sharedRCIM] initWithAppKey:@"82hegw5u8xulx"];//融云即时通讯
     [RCIM sharedRCIM].enablePersistentUserInfoCache = YES;
 
     if ([[UserInfo sharedUserInfo].userDic[@"id"] length] > 0) {
@@ -123,16 +123,29 @@
 
 -(void) getIMToken {
     
-    NSDictionary *dic = @{@"userName":[UserInfo sharedUserInfo].userDic[@"userName"],@"headPortrait":[UserInfo sharedUserInfo].userDic[@"headportrait"],@"id":[UserInfo sharedUserInfo].userDic[@"id"]};
+    NSDictionary *dic = @{
+                          @"deviceUUID":[UserInfo deviceUUID],
+                          @"name":[UIDevice currentDevice].name
+                          
+                          };
     
-    [YGHttpRequest GETDataUrl:[NSString stringWithFormat:@"%@%@",_YGURL,@"rong/getToken"] Parameters:dic callback:^(id obj) {
-        NSLog(@"%@",obj);
-
-        if ([[NSString stringWithFormat:@"%@",obj[@"code"]] isEqualToString:@"200"]) {
+    [YGHttpRequest POSTDataUrl:[NSString stringWithFormat:@"%@%@",_MYHOST,@"api/v1/login/sign"] Parameters:dic callback:^(id obj) {
+        NSLog(@"obj",obj);
+        if ([obj[@"code"] isEqualToValue:[NSNumber numberWithInteger:200] ]) {
+            [MBProgressHUD showSuccess:@"登陆成功" toView:self.view];
             
-            [[RCIM sharedRCIM] connectWithToken:obj[@"token"] success:^(NSString *userId) {
+            MYHostHomeMode *model = [MYHostHomeMode mj_objectWithKeyValues:obj[@"data"]];
+            
+            [[UserInfo sharedUserInfo].userDic setValue:model.portrait forKey:@"headportrait"];
+            [[UserInfo sharedUserInfo].userDic setValue:model.name forKey:@"userName"];
+            
+            NSString *token = model.token;
+            
+            [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
                 NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+                
                 [[RCIM sharedRCIM] setUserInfoDataSource:self];
+                
                 RCUserInfo *info = [[RCUserInfo alloc] initWithUserId:userId name:[UserInfo sharedUserInfo].userDic[@"userName"] portrait:[UserInfo sharedUserInfo].userDic[@"headportrait"]];
                 [RCIM sharedRCIM].currentUserInfo = info;
                 
@@ -152,9 +165,12 @@
                 NSLog(@"token错误");
             }];
             
+            
         }
         
-    }];
+    } ];
+    
+    
 }
 
 

@@ -90,30 +90,30 @@
     
     NSArray *images = @[@"智能办公",@"交流互动",@"周边商店"];
 
-    BOOL y = [XTGuidePagesViewController isShow];
-    if (!y) {
-
-        [[UserInfo sharedUserInfo] saveToSandbox];
-        [[UserInfo sharedUserInfo] loadInfoFromSandbox];
-
-        XTGuidePagesViewController *xt = [[XTGuidePagesViewController alloc] init];
-        self.window.rootViewController = xt;
-        xt.delegate = self;
-        [xt guidePageControllerWithImages:images];
-    }else{
-
-        [self clickEnter];
-
-        TabBarViewController *tabar = [[TabBarViewController alloc] init];
-        tabar.selectedIndex = 0;
-        self.window.rootViewController = tabar;
-    }
-
-    
+//    BOOL y = [XTGuidePagesViewController isShow];
+//    if (!y) {
+//
+//        [[UserInfo sharedUserInfo] saveToSandbox];
+//        [[UserInfo sharedUserInfo] loadInfoFromSandbox];
+//
+//        XTGuidePagesViewController *xt = [[XTGuidePagesViewController alloc] init];
+//        self.window.rootViewController = xt;
+//        xt.delegate = self;
+//        [xt guidePageControllerWithImages:images];
+//    }else{
+//
+//        [self clickEnter];
 //
 //        TabBarViewController *tabar = [[TabBarViewController alloc] init];
 //        tabar.selectedIndex = 0;
 //        self.window.rootViewController = tabar;
+//    }
+
+    
+//
+        TabBarViewController *tabar = [[TabBarViewController alloc] init];
+        tabar.selectedIndex = 0;
+        self.window.rootViewController = tabar;
     
 //        YGLoginViewController *tabar = [[YGLoginViewController alloc] init];
 //    //    tabar.selectedIndex = 0;
@@ -182,6 +182,7 @@
     
     [self requestAuthorizationForAddressBook];
     self.locationManager = [[AMapLocationManager alloc] init];
+  
     return YES;
 }
 

@@ -104,10 +104,12 @@
 #define _V2h5URL  @"http://47.106.82.144:8110/v2/" //正式
 #define _YGURL  @"http://119.23.239.163:9006/" // 正式
 
+#define _MYHOST @"http://192.168.31.121:8082/"
+
 #import <JQFMDB/JQFMDB.h>
 #import <Masonry/Masonry.h>
 #import "ParkNavagationController.h"
-
+#import <MJExtension/MJExtension.h>
 #import <WXApi.h>
 
 

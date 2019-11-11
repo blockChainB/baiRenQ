@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -86,6 +86,8 @@
 		7B541516233331BD0087846B /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B541515233331BD0087846B /* UIImage+Additions.m */; };
 		7B541519233331EC0087846B /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B541518233331EC0087846B /* UIImage+Resize.m */; };
 		7B541524233337C40087846B /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B541522233337C40087846B /* AlipaySDK.bundle */; };
+		7BAFF6BC23790E1400524557 /* NSMutableDictionary+avoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF6BB23790E1200524557 /* NSMutableDictionary+avoidCrash.m */; };
+		7BAFF6BF23795C9500524557 /* MYHostHomeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF6BE23795C9500524557 /* MYHostHomeMode.m */; };
 		7BBE5965233EEB040040FDBB /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE5943233EEB030040FDBB /* HomeModel.m */; };
 		7BBE5966233EEB040040FDBB /* YGHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE5945233EEB030040FDBB /* YGHomeModel.m */; };
 		7BBE5967233EEB040040FDBB /* CHCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE5948233EEB030040FDBB /* CHCycleScrollView.m */; };
@@ -285,6 +287,10 @@
 		7B541517233331EC0087846B /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		7B541518233331EC0087846B /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		7B541522233337C40087846B /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		7BAFF6BA23790E1200524557 /* NSMutableDictionary+avoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+avoidCrash.h"; path = "extion/NSMutableDictionary+avoidCrash.h"; sourceTree = "<group>"; };
+		7BAFF6BB23790E1200524557 /* NSMutableDictionary+avoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+avoidCrash.m"; path = "extion/NSMutableDictionary+avoidCrash.m"; sourceTree = "<group>"; };
+		7BAFF6BD23795C9500524557 /* MYHostHomeMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYHostHomeMode.h; sourceTree = "<group>"; };
+		7BAFF6BE23795C9500524557 /* MYHostHomeMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYHostHomeMode.m; sourceTree = "<group>"; };
 		7BBE5942233EEB030040FDBB /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		7BBE5943233EEB030040FDBB /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		7BBE5944233EEB030040FDBB /* YGHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGHomeModel.h; sourceTree = "<group>"; };
@@ -453,6 +459,8 @@
 				7BBE5940233EEB030040FDBB /* YG */,
 				7B541410233314B00087846B /* main.m */,
 				7B541495233321B80087846B /* PrefixHeader.pch */,
+				7BAFF6BA23790E1200524557 /* NSMutableDictionary+avoidCrash.h */,
+				7BAFF6BB23790E1200524557 /* NSMutableDictionary+avoidCrash.m */,
 				7B5414E6233330CE0087846B /* 人脸识别 */,
 				7B5414C723332D240087846B /* 引导页,新鲜事，广告 */,
 				7B54145C233321530087846B /* Base */,
@@ -812,6 +820,8 @@
 			isa = PBXGroup;
 			children = (
 				7BBE5942233EEB030040FDBB /* HomeModel.h */,
+				7BAFF6BD23795C9500524557 /* MYHostHomeMode.h */,
+				7BAFF6BE23795C9500524557 /* MYHostHomeMode.m */,
 				7BBE5943233EEB030040FDBB /* HomeModel.m */,
 				7BBE5944233EEB030040FDBB /* YGHomeModel.h */,
 				7BBE5945233EEB030040FDBB /* YGHomeModel.m */,
@@ -1174,6 +1184,7 @@
 				7BBE5994233F79960040FDBB /* YGCooperationController.m in Sources */,
 				7B5414A7233328300087846B /* UIView+Geometry.m in Sources */,
 				7B5414D023332DC30087846B /* YGPostContentController.m in Sources */,
+				7BAFF6BC23790E1400524557 /* NSMutableDictionary+avoidCrash.m in Sources */,
 				7B541490233321530087846B /* UserInfo.m in Sources */,
 				7B5414D723332EAB0087846B /* LasAdvertisementController.m in Sources */,
 				7BBE59A6233F7BF50040FDBB /* MMImageListView.m in Sources */,
@@ -1239,6 +1250,7 @@
 				7B5414D923332EAC0087846B /* SplashScreenView.m in Sources */,
 				7B5414CC23332D240087846B /* CALayer+Transition.m in Sources */,
 				7B395D55235474DF006F6DEB /* YGHomeAllAppsVC.m in Sources */,
+				7BAFF6BF23795C9500524557 /* MYHostHomeMode.m in Sources */,
 				7BBE598A233F72640040FDBB /* YGPeripheryViewController.m in Sources */,
 				7B54149E2333246A0087846B /* UIBarButtonItem+Badge.m in Sources */,
 				7B541509233330CE0087846B /* FaceRecognitionViewController.m in Sources */,
@@ -1439,7 +1451,7 @@
 					"$(PROJECT_DIR)/bissc/lib/UMShare/umcommonlog/umcommonlog_ios_1.0.0",
 					"$(PROJECT_DIR)/bissc/lib",
 				);
-				GCC_PREFIX_HEADER = /Users/longguangfa/Desktop/yg/yg3.0/ygk3.0/bissc/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/longguangfa/Desktop/bairen/lsc-client-v3-hotfix/bissc/PrefixHeader.pch";
 				INFOPLIST_FILE = bissc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1476,7 +1488,7 @@
 					"$(PROJECT_DIR)/bissc/lib/UMShare/umcommonlog/umcommonlog_ios_1.0.0",
 					"$(PROJECT_DIR)/bissc/lib",
 				);
-				GCC_PREFIX_HEADER = /Users/longguangfa/Desktop/yg/yg3.0/ygk3.0/bissc/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/longguangfa/Desktop/bairen/lsc-client-v3-hotfix/bissc/PrefixHeader.pch";
 				INFOPLIST_FILE = bissc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

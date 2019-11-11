@@ -492,14 +492,13 @@
 
 #pragma mark -- 登录
 -(void) loginAction {
-    NSString * password = [UserInfo sha224:@"13265636826"];
-//     @"pwd":password
+    
     NSDictionary *dic = @{
                           @"deviceUUID":[UserInfo deviceUUID],
                           @"name":[UIDevice currentDevice].name
                           
                           };
-    [YGHttpRequest POSTDataUrl:[NSString stringWithFormat:@"%@%@",@"http://192.168.31.114:8082",@"/api/v1/login/sign"] Parameters:dic callback:^(id obj) {
+    [YGHttpRequest POSTDataUrl:[NSString stringWithFormat:@"%@%@",_MYHOST,@"api/v1/login/sign"] Parameters:dic callback:^(id obj) {
         NSLog(@"obj",obj);
         
     } ];
@@ -510,7 +509,7 @@
 //
 //    self.view.window.rootViewController = tabar;
     
-    return;
+//    return;
     
     
     [self.phoneTF resignFirstResponder];

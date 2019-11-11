@@ -5,7 +5,7 @@
 //  Created by 龙广发 on 2018/11/1.
 //  Copyright © 2018年 龙广发. All rights reserved.
 //
-
+#import "MYHostHomeMode.h"
 #import "YGHomeViewController.h"
 #import "YGHomeTopHeaderView.h"
 #import "YGHomeModel.h"
@@ -148,11 +148,18 @@
     [super viewDidLoad];
     self.view.backgroundColor = appBgRGBColor;
     [self createUI];
+    
+    [self loginAction];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
+-(void) loginAction {
+    
+
+    
+}
 - (void)createUI{
     
     UIView *topV = [[UIView alloc ] init];
